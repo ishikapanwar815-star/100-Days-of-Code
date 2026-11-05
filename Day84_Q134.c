@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+enum Status {SUCCESS, FAILURE, TIMEOUT};
+
+int main()
+{
+    enum Status s;
+
+    printf("Enter status (0=SUCCESS, 1=FAILURE, 2=TIMEOUT): ");
+    scanf("%d", (int*)&s);
+
+    switch(s)
+    {
+        case SUCCESS:
+            printf("Operation Successful");
+            break;
+
+        case FAILURE:
+            printf("Operation Failed");
+            break;
+
+        case TIMEOUT:
+            printf("Time Limit Exceeded");
+            break;
+
+        default:
+            printf("Invalid Status");
+    }
+
+    return 0;
+}
